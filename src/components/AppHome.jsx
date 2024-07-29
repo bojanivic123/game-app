@@ -42,8 +42,7 @@ const AppHome = () => {
             setPoints(prevValue => prevValue + points);
             setCurrentWordPoints(points);
         } catch (err) {
-            console.error("Error:", err);
-            const errorMessage = err?.response?.data?.message || "Try again.";
+            const errorMessage = err?.response?.data?.message || "Try again.";                
             setError(errorMessage);
         } finally {
             setIsLoading(false);
@@ -56,9 +55,9 @@ const AppHome = () => {
             <h2>Enter word</h2>
             <h2>Score: {points}</h2>
             <form className="form" onSubmit={handleWord}>
-                <input type="text" name="word" value={word} onChange={e => setWord(e.target.value)} className="input" />
+                <input type="text" name="word" placeholder="Word" value={word} onChange={e => setWord(e.target.value)} className="input" />
                 {isLoading ? (
-                    <div className="spinner"></div>
+                    <div></div>
                         ) : (
                             <button className="btn" type="submit">Submit</button>
                         )}

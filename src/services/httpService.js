@@ -3,7 +3,6 @@ import axios from "axios";
 export default class HttpService {
     static #api = axios.create({
         baseURL: "http://localhost:8000/api",
-        timeout: 6000,
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"
@@ -15,7 +14,8 @@ export default class HttpService {
             url,
             method,
             params,
-            data
+            data, 
+            headers
         });
     }
 }

@@ -14,7 +14,7 @@
 }
 
 .container h2 {
-    margin-bottom: 10px 0;
+    margin-bottom: 10px;
 }
 
 .form {
@@ -60,7 +60,40 @@
 }
 
 .message.error {
+    background-color: yellow;
     color: red;
     border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .input {
+        max-width: 100%;
+    }
+
+    .message {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        border-radius: 0;
+        left: 0;
+        transform: none;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+    }
 }
 
